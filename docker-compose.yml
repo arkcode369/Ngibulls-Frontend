@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./Ngibulls-Backend
+      dockerfile: Dockerfile
+    container_name: ngibulls-backend
+    environment:
+      - PORT=3001
+      - CORS_ORIGINS=http://localhost,http://localhost:80
+    restart: unless-stopped
+    networks:
+      - ngibulls
+
+  frontend:
+    build:
+      context: ./Ngibulls-Frontend
+      dockerfile: Dockerfile
+    container_name: ngibulls-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - ngibulls
+
+networks:
+  ngibulls:
+    driver: bridge
