@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0ea5e9;
+  --accent: #6366f1;
+  --bg-dark: #0f172a;
+  --bg-darker: #020617;
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+.game-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1.5rem;
+}
+
+.btn-game-primary {
+  position: relative;
+  padding: 1rem 2rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  border-radius: 0.75rem;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border-bottom: 4px solid #1e40af;
+  box-shadow: 0 4px 0 #1e3a8a;
+}
+
+.btn-game-primary:hover {
+  background-color: #3b82f6;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #1e3a8a;
+}
+
+.btn-game-primary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1e3a8a;
+  border-bottom-width: 0;
+}
+
+.btn-game-secondary {
+  position: relative;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  border-radius: 0.75rem;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.btn-game-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(14, 165, 233, 0.2);
+}
+
+body {
+  background-color: var(--bg-darker);
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
